@@ -1,5 +1,6 @@
 package b2b.rsatu.portalservice.mapper;
 
+import b2b.rsatu.portalservice.dto.UserCreateRequestDto;
 import b2b.rsatu.portalservice.dto.UserDto;
 import b2b.rsatu.portalservice.entity.User;
 import org.mapstruct.Mapper;
@@ -8,4 +9,6 @@ import org.mapstruct.Mapper;
 public interface UserMapper {
 
     UserDto mapToDto(User user);
+
+    User mapToEntity(UserCreateRequestDto user);
 }
