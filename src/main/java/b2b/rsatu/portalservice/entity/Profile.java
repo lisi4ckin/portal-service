@@ -1,6 +1,7 @@
 package b2b.rsatu.portalservice.entity;
 
 import b2b.rsatu.portalservice.entity.reference.UserGroup;
+import b2b.rsatu.portalservice.entity.reference.UserRole;
 import lombok.Data;
 
 import javax.persistence.Entity;
@@ -12,8 +13,10 @@ import javax.persistence.SequenceGenerator;
 import javax.persistence.FetchType;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Id;
 import java.time.LocalDate;
+import java.util.List;
 
 @Entity
 @Data
@@ -37,6 +40,9 @@ public class Profile {
     private UserGroup group;
 
     @OneToOne(mappedBy = "profile")
-    private User user;
+    private PortalUser portalUser;
+
+    @OneToMany(mappedBy = "profile", fetch = FetchType.LAZY, cascade = {})
+    private List<UserRole> roles;
 
 }

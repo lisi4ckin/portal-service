@@ -14,10 +14,10 @@ import javax.persistence.CascadeType;
 import javax.persistence.Table;
 import javax.persistence.Id;
 
-@Entity
 @Data
+@Entity
 @Table(name = "PORTAL_USERS")
-public class User {
+public class PortalUser {
 
     @Id
     @Column(name = "PORTAL_USER_ID")
