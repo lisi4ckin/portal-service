@@ -2,13 +2,16 @@ package b2b.rsatu.portalservice.mapper;
 
 import b2b.rsatu.portalservice.dto.UserCreateRequestDto;
 import b2b.rsatu.portalservice.dto.UserDto;
-import b2b.rsatu.portalservice.entity.User;
+import b2b.rsatu.portalservice.entity.PortalUser;
 import org.mapstruct.Mapper;
+import org.mapstruct.Mapping;
 
 @Mapper(componentModel = "spring")
 public interface UserMapper {
 
-    UserDto mapToDto(User user);
+    UserDto mapToDto(PortalUser portalUser);
 
-    User mapToEntity(UserCreateRequestDto user);
+    @Mapping(target = "login", source = "login")
+    @Mapping(target = "password", source = "password")
+    PortalUser mapToEntity(UserCreateRequestDto user);
 }

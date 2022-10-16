@@ -2,7 +2,7 @@ package b2b.rsatu.portalservice.service.impl;
 
 import b2b.rsatu.portalservice.dto.UserCreateRequestDto;
 import b2b.rsatu.portalservice.dto.UserDto;
-import b2b.rsatu.portalservice.entity.User;
+import b2b.rsatu.portalservice.entity.PortalUser;
 import b2b.rsatu.portalservice.mapper.UserMapper;
 import b2b.rsatu.portalservice.service.UserAuthControllerService;
 import b2b.rsatu.portalservice.service.UserAuthService;
@@ -21,8 +21,8 @@ public class UserAuthControllerServiceImpl implements UserAuthControllerService 
 
     @Override
     public UserDto registrationUser(UserCreateRequestDto newUser) {
-        User user = userMapper.mapToEntity(newUser);
-        authService.registrationUser(user);
-        return userMapper.mapToDto(user);
+        PortalUser portalUser = userMapper.mapToEntity(newUser);
+        authService.registrationUser(portalUser);
+        return userMapper.mapToDto(portalUser);
     }
 }

@@ -40,7 +40,7 @@ public class Profile {
     private UserGroup group;
 
     @OneToOne(mappedBy = "profile")
-    private User user;
+    private PortalUser portalUser;
 
     @OneToMany(mappedBy = "profile", fetch = FetchType.LAZY, cascade = {})
     private List<UserRole> roles;

@@ -1,7 +1,8 @@
 package b2b.rsatu.portalservice.service.impl;
 
-import b2b.rsatu.portalservice.entity.User;
+import b2b.rsatu.portalservice.entity.PortalUser;
 import b2b.rsatu.portalservice.repository.UserRepository;
+import b2b.rsatu.portalservice.service.ProfileService;
 import b2b.rsatu.portalservice.service.UserAuthService;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.slf4j.Logger;
@@ -17,19 +18,25 @@ public class UserAuthServiceImpl implements UserAuthService {
     @Resource
     private UserRepository userRepository;
 
+    @Resource
+    private ProfileService profileService;
+
     @Override
-    public User registrationUser(User newUser) {
-        User user = userRepository.findUserByLogin(newUser.getLogin());
+    public PortalUser registrationUser(PortalUser newPortalUser) {
+        PortalUser portalUser = userRepository.findUserByLogin(newPortalUser.getLogin());
 
-        String hashPassword = getHashPassword(newUser.getPassword());
-        newUser.setPassword(hashPassword);
+        String hashPassword = getHashPassword(newPortalUser.getPassword());
+        newPortalUser.setPassword(hashPassword);
 
-        if (user != null) {
+        if (portalUser != null) {
             logger.warn("Operation=registrationUser, action=warn, message=User with this login already exist");
         } else {
-            user = userRepository.save(newUser);
+            portalUser = userRepository.save(newPortalUser);
+            portalUser.setProfile(profileService.createProfileNewUser(newPortalUser));
+            userRepository.save(newPortalUser);
+            logger.info("Operation=registrationUser, action=end");
         }
-        return user;
+        return portalUser;
     }
 
     private String getHashPassword(String password) {
