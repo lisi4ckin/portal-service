@@ -12,5 +12,6 @@ import org.mapstruct.Mapping;
 public interface ProfileMapper {
 
     @Mapping(target = "portalUser", source = "portalUser", qualifiedByName = "basePortalUser")
+    @Mapping(target = "group", source = "group", ignore = true)
     ProfileDto mapToDto(Profile userProfile);
 }
