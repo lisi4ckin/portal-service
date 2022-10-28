@@ -5,6 +5,7 @@ import b2b.rsatu.portalservice.entity.base.BaseEntity;
 import lombok.Data;
 
 import javax.persistence.AttributeOverride;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -12,6 +13,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import java.time.LocalDateTime;
 
 @Data
 @Entity
@@ -23,12 +25,15 @@ public class PortalNews extends BaseEntity {
     @Lob
     private String description;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name = "AUTHOR_ID")
     private PortalUser author;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "NEWS_CATEGORY_ID")
     private PortalNewsCategory newsCategory;
+
+    @Column(name = "CREATION_DATE")
+    private LocalDateTime creationDate;
 
 }

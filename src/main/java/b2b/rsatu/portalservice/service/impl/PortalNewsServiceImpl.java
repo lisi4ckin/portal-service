@@ -7,6 +7,7 @@ import b2b.rsatu.portalservice.service.PortalNewsService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Service
@@ -17,7 +18,9 @@ public class PortalNewsServiceImpl implements PortalNewsService {
 
     @Override
     public PortalNews createPortalNews(PortalNews newNews) {
-        return newsRepository.save(newNews);
+
+        newNews.setCreationDate(LocalDateTime.now());
+        return newsRepository.saveAndFlush(newNews);
     }
 
     @Override

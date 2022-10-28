@@ -13,6 +13,7 @@ public interface UserMapper {
     @Named("basePortalUser")
     UserDto mapToDto(PortalUser portalUser);
 
+    @Named("portalUserMapper")
     @Mapping(target = "login", source = "login")
     @Mapping(target = "password", source = "password")
     PortalUser mapToEntity(UserCreateRequestDto user);
