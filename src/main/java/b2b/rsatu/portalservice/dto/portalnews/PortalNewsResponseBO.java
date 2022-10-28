@@ -6,7 +6,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class PortalNewsResponseDto {
+public class PortalNewsResponseBO {
 
     private String name;
     private String description;

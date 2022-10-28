@@ -1,7 +1,7 @@
 package b2b.rsatu.portalservice.controller;
 
 import b2b.rsatu.portalservice.dto.portalnews.PortalNewsCreationBO;
-import b2b.rsatu.portalservice.dto.portalnews.PortalNewsResponseDto;
+import b2b.rsatu.portalservice.dto.portalnews.PortalNewsResponseBO;
 import b2b.rsatu.portalservice.service.PortalNewsControllerService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -20,7 +20,7 @@ public class PortalNewsController {
     private PortalNewsControllerService newsControllerService;
 
     @PostMapping
-    public ResponseEntity<PortalNewsResponseDto> createNews(@RequestBody PortalNewsCreationBO newNews) {
+    public ResponseEntity<PortalNewsResponseBO> createNews(@RequestBody PortalNewsCreationBO newNews) {
         return new ResponseEntity<>(newsControllerService.createNews(newNews), HttpStatus.OK);
     }
 }
