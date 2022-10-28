@@ -13,7 +13,6 @@ import org.mapstruct.Named;
 public interface PortalNewsMapper {
 
     @Named("baseCreateMapper")
-    @Mapping(target = "author", source = "author")
     PortalNews mapToEntity(PortalNewsCreationBO creationDto);
 
     @Named("responseNewsMapper")

@@ -4,6 +4,7 @@ import b2b.rsatu.portalservice.entity.PortalUser;
 import b2b.rsatu.portalservice.entity.news.PortalNews;
 import b2b.rsatu.portalservice.repository.news.PortalNewsRepository;
 import b2b.rsatu.portalservice.service.PortalNewsService;
+import b2b.rsatu.portalservice.service.PortalUserService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -16,9 +17,11 @@ public class PortalNewsServiceImpl implements PortalNewsService {
     @Resource
     private PortalNewsRepository newsRepository;
 
+    @Resource
+    private PortalUserService userService;
+
     @Override
     public PortalNews createPortalNews(PortalNews newNews) {
-
         newNews.setCreationDate(LocalDateTime.now());
         return newsRepository.saveAndFlush(newNews);
     }
