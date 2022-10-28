@@ -1,7 +1,7 @@
 package b2b.rsatu.portalservice.service.impl;
 
-import b2b.rsatu.portalservice.dto.UserCreateRequestDto;
-import b2b.rsatu.portalservice.dto.UserDto;
+import b2b.rsatu.portalservice.dto.user.UserCreateRequestDto;
+import b2b.rsatu.portalservice.dto.user.UserDto;
 import b2b.rsatu.portalservice.entity.PortalUser;
 import b2b.rsatu.portalservice.mapper.UserMapper;
 import b2b.rsatu.portalservice.service.UserAuthControllerService;

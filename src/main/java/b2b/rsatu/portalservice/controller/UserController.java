@@ -1,7 +1,7 @@
 package b2b.rsatu.portalservice.controller;
 
-import b2b.rsatu.portalservice.dto.UserCreateRequestDto;
-import b2b.rsatu.portalservice.dto.UserDto;
+import b2b.rsatu.portalservice.dto.user.UserCreateRequestDto;
+import b2b.rsatu.portalservice.dto.user.UserDto;
 import b2b.rsatu.portalservice.service.UserAuthControllerService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

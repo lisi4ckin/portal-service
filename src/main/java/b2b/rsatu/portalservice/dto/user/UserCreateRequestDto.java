@@ -1,4 +1,4 @@
-package b2b.rsatu.portalservice.dto;
+package b2b.rsatu.portalservice.dto.user;
 
 import lombok.Data;
 

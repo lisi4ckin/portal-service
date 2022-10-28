@@ -1,6 +1,6 @@
 package b2b.rsatu.portalservice.dto.profile;
 
-import b2b.rsatu.portalservice.dto.UserDto;
+import b2b.rsatu.portalservice.dto.user.UserDto;
 import lombok.Data;
 
 import java.time.LocalDate;

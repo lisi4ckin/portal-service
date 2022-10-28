@@ -1,9 +1,8 @@
 package b2b.rsatu.portalservice.mapper;
 
-import b2b.rsatu.portalservice.dto.UserCreateRequestDto;
-import b2b.rsatu.portalservice.dto.UserDto;
+import b2b.rsatu.portalservice.dto.user.UserCreateRequestDto;
+import b2b.rsatu.portalservice.dto.user.UserDto;
 import b2b.rsatu.portalservice.entity.PortalUser;
-import org.mapstruct.BeanMapping;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Named;
