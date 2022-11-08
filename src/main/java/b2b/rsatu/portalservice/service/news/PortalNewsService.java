@@ -1,4 +1,4 @@
-package b2b.rsatu.portalservice.service;
+package b2b.rsatu.portalservice.service.news;
 
 import b2b.rsatu.portalservice.entity.PortalUser;
 import b2b.rsatu.portalservice.entity.news.PortalNews;

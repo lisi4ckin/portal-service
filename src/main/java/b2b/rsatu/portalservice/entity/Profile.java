@@ -39,9 +39,6 @@ public class Profile {
     @JoinColumn(name = "GROUP_ID")
     private UserGroup group;
 
-    @OneToOne(mappedBy = "profile")
-    private PortalUser portalUser;
-
     @OneToMany(mappedBy = "profile", fetch = FetchType.LAZY, cascade = {})
     private List<UserRole> roles;
 

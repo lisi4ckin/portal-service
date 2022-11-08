@@ -2,7 +2,7 @@ package b2b.rsatu.portalservice.controller;
 
 import b2b.rsatu.portalservice.dto.portalnews.PortalNewsCreationBO;
 import b2b.rsatu.portalservice.dto.portalnews.PortalNewsResponseBO;
-import b2b.rsatu.portalservice.service.PortalNewsControllerService;
+import b2b.rsatu.portalservice.service.news.PortalNewsControllerService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;

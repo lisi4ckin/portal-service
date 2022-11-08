@@ -1,8 +1,8 @@
-package b2b.rsatu.portalservice.service.impl;
+package b2b.rsatu.portalservice.service.impl.portaluser;
 
 import b2b.rsatu.portalservice.entity.PortalUser;
 import b2b.rsatu.portalservice.repository.UserRepository;
-import b2b.rsatu.portalservice.service.PortalUserService;
+import b2b.rsatu.portalservice.service.portaluser.PortalUserService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -16,5 +16,10 @@ public class PortalUserServiceImpl implements PortalUserService {
     @Override
     public PortalUser getPortalUserByLogin(String userLogin) {
         return userRepository.findUserByLogin(userLogin);
+    }
+
+    @Override
+    public PortalUser getPortalUserById(Long id) {
+        return userRepository.getReferenceById(id);
     }
 }

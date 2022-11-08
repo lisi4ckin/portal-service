@@ -1,9 +1,9 @@
-package b2b.rsatu.portalservice.service.impl;
+package b2b.rsatu.portalservice.service.impl.portaluser;
 
 import b2b.rsatu.portalservice.entity.PortalUser;
 import b2b.rsatu.portalservice.repository.UserRepository;
-import b2b.rsatu.portalservice.service.ProfileService;
-import b2b.rsatu.portalservice.service.UserAuthService;
+import b2b.rsatu.portalservice.service.portaluser.profile.ProfileService;
+import b2b.rsatu.portalservice.service.portaluser.UserAuthService;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

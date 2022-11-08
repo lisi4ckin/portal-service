@@ -1,6 +1,5 @@
 package b2b.rsatu.portalservice.dto.profile;
 
-import b2b.rsatu.portalservice.dto.user.UserDto;
 import lombok.Data;
 
 import java.time.LocalDate;
@@ -15,5 +14,5 @@ public class ProfileDto {
     //todo Переделать на дто группы
     private String group;
 
-    private UserDto portalUser;
+    private Long profileId;
 }

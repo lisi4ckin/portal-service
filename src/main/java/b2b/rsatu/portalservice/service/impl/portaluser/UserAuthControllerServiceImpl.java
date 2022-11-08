@@ -1,11 +1,11 @@
-package b2b.rsatu.portalservice.service.impl;
+package b2b.rsatu.portalservice.service.impl.portaluser;
 
 import b2b.rsatu.portalservice.dto.user.UserCreateRequestDto;
 import b2b.rsatu.portalservice.dto.user.UserDto;
 import b2b.rsatu.portalservice.entity.PortalUser;
 import b2b.rsatu.portalservice.mapper.UserMapper;
-import b2b.rsatu.portalservice.service.UserAuthControllerService;
-import b2b.rsatu.portalservice.service.UserAuthService;
+import b2b.rsatu.portalservice.service.portaluser.UserAuthControllerService;
+import b2b.rsatu.portalservice.service.portaluser.UserAuthService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;

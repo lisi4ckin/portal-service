@@ -1,10 +1,10 @@
-package b2b.rsatu.portalservice.service.impl;
+package b2b.rsatu.portalservice.service.impl.news;
 
 import b2b.rsatu.portalservice.entity.PortalUser;
 import b2b.rsatu.portalservice.entity.news.PortalNews;
 import b2b.rsatu.portalservice.repository.news.PortalNewsRepository;
-import b2b.rsatu.portalservice.service.PortalNewsService;
-import b2b.rsatu.portalservice.service.PortalUserService;
+import b2b.rsatu.portalservice.service.news.PortalNewsService;
+import b2b.rsatu.portalservice.service.portaluser.PortalUserService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
